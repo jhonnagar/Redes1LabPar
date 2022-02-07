@@ -1,0 +1,17 @@
+install open vpn dentro de la maquina virtual 
+sudo apt-get update
+sudo apt-get upgrade
+-----
+wget version 
+sudo apt-get install wget 
+sudo wget https://cubaelectronica.com/OpenVPN/openvpn-install.sh
+sudo bash openvpn-install.sh
+
+agregar nuevo cliente 
+sudo bash openvpn-install.sh
+sudo -i
+cp redes1clase3.ovpn /home/
+exit 
+
+asistencia 
+https://forms.gle/bPM7PKZ4EhxW9b4t5
