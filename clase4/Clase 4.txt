@@ -1,0 +1,22 @@
+--configurar ip en una vpc 
+VPC 1 
+ip 192.168.10.10 255.255.255.0 192.168.10.1
+ 
+VPC 2 
+ip 192.168.10.20 255.255.255.0 192.168.10.1
+
+VPC 3 
+ip 192.168.10.30 255.255.255.0 192.168.10.1
+
+VPC 4 
+ip 192.168.10.40 255.255.255.0 192.168.10.1
+--- ver informacion de la ip dentro de una vpc
+sh ip 
+
+---- guardar los cambios 
+save 
+
+----hacer pin en las maquinas 
+
+pin 192.168.10.20
+
