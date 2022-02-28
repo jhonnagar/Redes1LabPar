@@ -1,0 +1,52 @@
+
+--configurar ip en una vpc 
+VPC 1 
+ip 192.168.10.10 255.255.255.0 192.168.10.1
+ 
+VPC 2 
+ip 192.168.10.20 255.255.255.0 192.168.10.1
+
+VPC 3 
+ip 192.168.10.30 255.255.255.0 192.168.10.1
+
+VPC 4 
+ip 192.168.10.40 255.255.255.0 192.168.10.1
+
+---abrir la configuracion de la terminal 
+Conf t 
+---crear la vlan 
+vlan 10
+name admin 
+vlan 20 
+name ventas 
+
+exit 
+---mostrar todas las vlan del switch 
+sh vlan-switch
+---entrar a la configuracion de la interfas 
+interface f1/2
+switchport mode access
+switchport access vlan 10
+
+interface f1/2
+switchport mode access
+switchport access vlan 20
+
+---configurar el modo trunk 
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,1002-1005
+
+---mostar las vlans en modo acces y en modo trunk
+do sh vlan-sw
+do sh int tr
+
+----configuracion del vtp 
+vtp domain R1
+vtp pass 123
+vtp mode server
+vtp version 2
+vtp pruning
+do sh vtp st
+
+
+

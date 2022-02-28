@@ -1,0 +1,23 @@
+--configurar ip en una vpc 
+VPC 1 
+ip 192.168.10.10 255.255.255.0 192.168.10.1
+ 
+VPC 2 
+ip 192.168.10.20 255.255.255.0 192.168.10.1
+vlan 10 
+name ejem
+interface f1/0 
+switchport mode trunk
+switchport trunk allowed vlan 1,10,1002-1005
+interface f1/2
+switchport mode trunk
+switchport trunk allowed vlan 1,10,1002-1005
+
+switchport mode access
+switchport access vlan 10
+
+do sh int tr
+
+sh spanning-tree root
+show spanning-tree brief
+show spanning-tree blockedports
