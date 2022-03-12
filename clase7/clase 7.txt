@@ -1,0 +1,24 @@
+clase 7
+interfaces range f#/# - #
+channel-group # mode on 
+int port-channel 1 
+end
+show etherchannel port-channel
+show etherchannel summary 
+
+sh spanning-tree br
+
+do sh vlan-sw
+do sh int tr
+
+VPC 1 
+ip 192.168.10.10 255.255.255.0 192.168.10.1
+ 
+VPC 2 
+ip 192.168.10.20 255.255.255.0 192.168.10.1
+
+VPC 3 
+ip 192.168.10.30 255.255.255.0 192.168.10.1
+
+VPC 4 
+ip 192.168.10.40 255.255.255.0 192.168.10.1 
